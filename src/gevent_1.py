@@ -96,8 +96,10 @@ def foo(msg, n):
     gevent.sleep(n)
     print(msg, n)
 
+
 def fail(n):
     print('fail')
+
 
 t1 = Greenlet.spawn(foo, 'Hello', 1)
 t2 = gevent.spawn(foo, 'i live!', 2)
@@ -115,8 +117,6 @@ finally:
 print(t3.ready())
 print(t3.successful())
 print(t3.exception)
-
-
 
 from gevent import Timeout
 

@@ -1,2 +1,5 @@
 # ide folders
 .idea/
+
+#
+/venv
